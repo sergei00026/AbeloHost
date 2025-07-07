@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #222;
+  color: #fff;
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+	
+  }
+
+  .link, .logout {
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 1rem;
+    text-decoration: underline;
+		transition: all 0.3s ease;
+		&:hover {
+			color: #ccc;
+	
+		}
+  }
+
+  .userBlock {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    .userBlock {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+}
