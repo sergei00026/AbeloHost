@@ -5,7 +5,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "set NEXT_PUBLIC_BASE_PATH=/AbeloHost && next build",
+    "deploy": "npm run export && gh-pages -d out"
   },
   "dependencies": {
     "axios": "^1.10.0",
@@ -20,6 +22,7 @@
     "@types/react": "^18.2.70",
     "@types/react-dom": "^18.2.19",
     "eslint": "^9.30.1",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.6.2",
     "stylelint": "^16.21.1",
     "stylelint-config-prettier": "^9.0.5",

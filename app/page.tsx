@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import api from '../utils/api';
 import { useUserStore } from '../store/userStore';
 import ProductCard from './components/ProductCard';

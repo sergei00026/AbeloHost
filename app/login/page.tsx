@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import api from '../../utils/api';
 import { useUserStore } from '../../store/userStore';
 import Loader from '../components/Loader';
@@ -12,7 +11,6 @@ export default function LoginPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const setUser = useUserStore((state) => state.setUser);
-  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,7 +37,7 @@ export default function LoginPage() {
         accessToken,
         refreshToken,
       });
-      router.push('/');
+      window.location.href = '/AbeloHost/';
     } catch (err: any) {
       setError('Неверный логин или пароль');
     } finally {
